@@ -10,6 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var ageLabel: UITextField!
+    
+    @IBAction func tappedButton(_ sender: Any) {
+        
+        let name:String = self.nameLabel.text!
+        let age:Int? = Int(self.ageLabel.text!)
+        
+        theLabel.text = "The dog name is \(name) and \(age) years old"
+        
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
