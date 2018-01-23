@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let name:String = self.nameLabel.text!
         let age:Int? = Int(self.ageLabel.text!)
         
-        theLabel.text = "The dog name is \(name) and \(age) years old"
+        theLabel.text = "The dog name is \(name) and \(age ?? 0) years old"
         
         
         
