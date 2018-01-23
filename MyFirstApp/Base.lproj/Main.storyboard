@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CmP-pT-xBx">
-                                <rect key="frame" x="158" y="319" width="59" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvb-nu-2qo">
                                 <rect key="frame" x="154" y="177" width="67" height="30"/>
                                 <state key="normal" title="PUSH ME"/>
@@ -40,8 +34,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1r-9d-P3G">
-                                <rect key="frame" x="159" y="251" width="59" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfM-Ui-a4O">
+                                <rect key="frame" x="137.5" y="269" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XyX-D6-UCn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-kz-9aE">
+                                <rect key="frame" x="137.5" y="342" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Uah-vE-2xe"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -49,22 +55,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CmP-pT-xBx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0I4-uG-ZV2"/>
                             <constraint firstItem="Ia7-gx-BPT" firstAttribute="trailing" secondItem="hvb-nu-2qo" secondAttribute="trailing" id="0Xk-Us-fF6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L1r-9d-P3G" secondAttribute="trailing" constant="157" id="9Th-QB-3wu"/>
                             <constraint firstItem="Ia7-gx-BPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5O-Rq-we2"/>
                             <constraint firstItem="Ia7-gx-BPT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="Ngb-CJ-DgZ"/>
-                            <constraint firstItem="CmP-pT-xBx" firstAttribute="centerX" secondItem="hvb-nu-2qo" secondAttribute="centerX" id="VSr-Lv-xg5"/>
-                            <constraint firstItem="L1r-9d-P3G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="eFV-Mq-bnJ"/>
+                            <constraint firstItem="sfM-Ui-a4O" firstAttribute="top" secondItem="hvb-nu-2qo" secondAttribute="bottom" constant="62" id="WZc-wa-CXb"/>
+                            <constraint firstItem="kvU-kz-9aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wq2-Jx-Wk9"/>
+                            <constraint firstItem="kvU-kz-9aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bqg-aj-hpa"/>
                             <constraint firstItem="Ia7-gx-BPT" firstAttribute="leading" secondItem="hvb-nu-2qo" secondAttribute="leading" id="hco-P8-McD"/>
                             <constraint firstItem="hvb-nu-2qo" firstAttribute="top" secondItem="Ia7-gx-BPT" secondAttribute="bottom" constant="21" id="o1W-ej-lUe"/>
-                            <constraint firstItem="CmP-pT-xBx" firstAttribute="top" secondItem="L1r-9d-P3G" secondAttribute="bottom" constant="38" id="w90-Zo-l41"/>
+                            <constraint firstItem="kvU-kz-9aE" firstAttribute="top" secondItem="sfM-Ui-a4O" secondAttribute="bottom" constant="43" id="ulJ-1d-ONX"/>
+                            <constraint firstItem="sfM-Ui-a4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y2X-xg-eNa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ageLabel" destination="L1r-9d-P3G" id="eFa-E3-hVY"/>
-                        <outlet property="nameLabel" destination="CmP-pT-xBx" id="egp-WM-KUt"/>
+                        <outlet property="text1" destination="sfM-Ui-a4O" id="fd7-e9-vlM"/>
+                        <outlet property="text2" destination="kvU-kz-9aE" id="hvO-RV-W3t"/>
                         <outlet property="theLabel" destination="Ia7-gx-BPT" id="An9-uY-FQE"/>
                     </connections>
                 </viewController>

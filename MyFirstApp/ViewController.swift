@@ -10,19 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var ageLabel: UITextField!
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
     
     @IBOutlet weak var theLabel: UILabel!
     @IBAction func tappedButton(_ sender: Any) {
         
+        theLabel.text = "Answer is: \(Double(text1.text!)! + Double(text2.text!)!)"
+    
+        /*
         let name:String = self.nameLabel.text!
         let age:Int? = Int(self.ageLabel.text!)
         
         theLabel.text = "The dog name is \(name) and \(age ?? 0) years old"
         
-        
+        */
         
         
     }
