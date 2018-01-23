@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var theLabel: UILabel!
+
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var ageLabel: UITextField!
     
+    @IBOutlet weak var theLabel: UILabel!
     @IBAction func tappedButton(_ sender: Any) {
         
         let name:String = self.nameLabel.text!
