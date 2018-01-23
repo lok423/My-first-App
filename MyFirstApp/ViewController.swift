@@ -9,23 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var text1: UITextField!
     
     @IBOutlet weak var text2: UITextField!
     
     @IBOutlet weak var theLabel: UILabel!
     @IBAction func tappedButton(_ sender: Any) {
+        var addition = true
         
-        theLabel.text = "Answer is: \(Double(text1.text!)! + Double(text2.text!)!)"
-    
+        
+        if addition {
+            theLabel.text = "Answer is: \(Double(text1.text!)! + Double(text2.text!)!)"
+        }else{
+            theLabel.text = "Answer is: \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
+        
         /*
-        let name:String = self.nameLabel.text!
-        let age:Int? = Int(self.ageLabel.text!)
-        
-        theLabel.text = "The dog name is \(name) and \(age ?? 0) years old"
-        
-        */
+         let name:String = self.nameLabel.text!
+         let age:Int? = Int(self.ageLabel.text!)
+         
+         theLabel.text = "The dog name is \(name) and \(age ?? 0) years old"
+         
+         */
         
         
     }
